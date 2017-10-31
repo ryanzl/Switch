@@ -67,6 +67,15 @@ import UIKit
         }
     }
 
+
+    /// The color used for the switch foreground.
+    /// switch的前景颜色
+    @IBInspectable open var switchForegroundColor: UIColor = UIColor.clear {
+        didSet{
+            switchLayer.backgroundColor = switchForegroundColor.cgColor
+        }
+    }
+
     /// The color used for the switch background. Transparent by default.
     @IBInspectable open var backColor: UIColor = UIColor.clear {
         didSet {
